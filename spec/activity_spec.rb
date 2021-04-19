@@ -28,5 +28,13 @@ RSpec.describe Activity do
       activity.add_participant("Luther", 40)
       expect(activity.total_cost).to eq(60)
     end
+
+    it 'has a way to split' do
+      expect(activity.split).to eq(30)
+    end
+
+    it 'can show what is owed' do
+      expect(activity.owed).to eq({"Maria" => 10, "Luther" => -10})
+    end
   end
 end

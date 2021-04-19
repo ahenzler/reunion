@@ -15,4 +15,16 @@ class Activity
   def total_cost
     @participants.values.sum
   end
+
+  def split
+    total_cost/@participants.count
+  end
+
+  def owed
+    owed = {}
+    @participants.each do |key, value|
+      owed[key] = split - value
+    end
+    owed
+  end
 end

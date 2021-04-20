@@ -41,7 +41,6 @@ RSpec.describe Reunion do
     end
 
     it 'has a breakout method' do
-
       expect(reunion.breakout).to eq({"Maria" => -10, "Luther" => -30, "Louis" => 40})
     end
   end

@@ -19,8 +19,8 @@ class Reunion
   end
 
   def breakout
-    owed_hashes = {}
     @activities.each do |activity|
-      owed_hashes += activity.owed
+      activity.owed.each do |key, value|
+        owed[key] += value
   end
 end
